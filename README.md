@@ -26,16 +26,25 @@ export SOCQ_API_KEY="your-api-key"
 Never put a SocQ API key in browser code, mobile apps, public repositories,
 screenshots, fixtures, or logs.
 
-## First examples
+## Focused API repositories
 
-| Workflow | cURL | Node.js | Python | Focused repository |
-| --- | --- | --- | --- | --- |
-| Instagram profile search | [`curl/instagram-search.md`](curl/instagram-search.md) | [`node/instagram-search`](node/instagram-search) | [`python/instagram-search`](python/instagram-search) | [`instagram-search-api`](https://github.com/SocQAPI/instagram-search-api) |
-| YouTube transcripts | [`curl/youtube-transcript.md`](curl/youtube-transcript.md) | [`node/youtube-transcript`](node/youtube-transcript) | [`python/youtube-transcript`](python/youtube-transcript) | [`youtube-transcript-api`](https://github.com/SocQAPI/youtube-transcript-api) |
+Every current submit endpoint has a focused repository with cURL, Node.js, and
+Python examples, endpoint-specific behavior, production guidance, responsible
+use notes, and synthetic fixtures.
 
-The complete public endpoint inventory lives in
-[`catalog/endpoints.json`](catalog/endpoints.json). More runnable examples will
-be added from the same shared clients and repository template.
+| Instagram | Facebook | YouTube | TikTok |
+| --- | --- | --- | --- |
+| [Posts](https://github.com/SocQAPI/instagram-posts-api) | [Pages](https://github.com/SocQAPI/facebook-pages-api) | [Channels](https://github.com/SocQAPI/youtube-channels-api) | [Profiles](https://github.com/SocQAPI/tiktok-profiles-api) |
+| [Comments](https://github.com/SocQAPI/instagram-comments-api) | [Posts](https://github.com/SocQAPI/facebook-posts-api) | [Videos](https://github.com/SocQAPI/youtube-videos-api) | [Videos](https://github.com/SocQAPI/tiktok-videos-api) |
+| [Followers Count](https://github.com/SocQAPI/instagram-followers-count-api) | [Comments](https://github.com/SocQAPI/facebook-comments-api) | [Channel Videos](https://github.com/SocQAPI/youtube-channel-videos-api) | [Comments](https://github.com/SocQAPI/tiktok-comments-api) |
+| [Reels](https://github.com/SocQAPI/instagram-reels-api) |  | [Comments](https://github.com/SocQAPI/youtube-comments-api) | [Search](https://github.com/SocQAPI/tiktok-search-api) |
+| [Search](https://github.com/SocQAPI/instagram-search-api) |  | [Shorts](https://github.com/SocQAPI/youtube-shorts-api) | [Hashtags](https://github.com/SocQAPI/tiktok-hashtags-api) |
+|  |  | [Search](https://github.com/SocQAPI/youtube-search-api) |  |
+|  |  | [Transcripts](https://github.com/SocQAPI/youtube-transcript-api) |  |
+
+The machine-readable inventory in
+[`catalog/endpoints.json`](catalog/endpoints.json) maps all 20 public endpoint
+contracts to their focused repositories.
 
 ## Shared workflow
 

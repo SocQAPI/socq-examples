@@ -12,16 +12,22 @@ if (manifest.schemaVersion !== 1 || !Array.isArray(manifest.endpoints)) {
 
 const ids = new Set();
 const paths = new Set();
+const repositories = new Set();
 for (const endpoint of manifest.endpoints) {
-  for (const field of ["id", "name", "method", "path", "landingPage"]) {
+  for (const field of ["id", "name", "method", "path", "landingPage", "repository", "status"]) {
     if (!endpoint[field]) throw new Error(`${endpoint.id || "endpoint"} is missing ${field}.`);
   }
   if (ids.has(endpoint.id)) throw new Error(`Duplicate endpoint id: ${endpoint.id}`);
   if (paths.has(endpoint.path)) throw new Error(`Duplicate endpoint path: ${endpoint.path}`);
+  if (repositories.has(endpoint.repository)) {
+    throw new Error(`Duplicate focused repository: ${endpoint.repository}`);
+  }
   if (endpoint.method !== "POST") throw new Error(`${endpoint.id} must use POST.`);
+  if (endpoint.status !== "published") throw new Error(`${endpoint.id} is not published.`);
   if (!endpoint.path.startsWith("/v1/")) throw new Error(`${endpoint.id} has an invalid path.`);
   ids.add(endpoint.id);
   paths.add(endpoint.path);
+  repositories.add(endpoint.repository);
 }
 
 if (manifest.endpoints.length !== 20) {
