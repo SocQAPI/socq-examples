@@ -1,0 +1,32 @@
+name: Example request
+description: Request a new endpoint or language example.
+title: "[Example]: "
+labels:
+  - enhancement
+body:
+  - type: input
+    id: endpoint
+    attributes:
+      label: SocQ endpoint
+      placeholder: POST /v1/tiktok/search
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Preferred example
+      options:
+        - cURL
+        - Node.js
+        - Python
+        - Next.js server route
+        - Webhook receiver
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: Explain the public-data workflow this example should support.
+    validations:
+      required: true

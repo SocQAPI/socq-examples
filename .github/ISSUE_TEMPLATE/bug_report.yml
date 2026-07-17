@@ -1,0 +1,40 @@
+name: Example bug
+description: Report a reproducible problem in a public SocQ example.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: input
+    id: path
+    attributes:
+      label: Example path
+      placeholder: node/instagram-search/index.mjs
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Redact API keys, task IDs, account data, and production payloads.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Use placeholder values and safe public sample data.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, private data, and production identifiers.
+          required: true

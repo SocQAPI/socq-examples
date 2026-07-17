@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "contract": "https://docs.socq.ai/api-manual/agent-api/agent-api.json",
+  "endpoints": [
+    {"id":"instagram-posts","name":"Instagram Posts API","method":"POST","path":"/v1/instagram/posts","landingPage":"https://socq.ai/apis/instagram/posts"},
+    {"id":"instagram-comments","name":"Instagram Comments API","method":"POST","path":"/v1/instagram/comments","landingPage":"https://socq.ai/apis/instagram/comments"},
+    {"id":"instagram-followers-count","name":"Instagram Followers Count API","method":"POST","path":"/v1/instagram/followers-count","landingPage":"https://socq.ai/apis/instagram/followers-count"},
+    {"id":"instagram-reels","name":"Instagram Reels API","method":"POST","path":"/v1/instagram/reels","landingPage":"https://socq.ai/apis/instagram/reels"},
+    {"id":"instagram-search","name":"Instagram Search API","method":"POST","path":"/v1/instagram/search","landingPage":"https://socq.ai/apis/instagram/search","repository":"instagram-search-api","status":"pilot"},
+    {"id":"facebook-pages","name":"Facebook Pages API","method":"POST","path":"/v1/facebook/pages","landingPage":"https://socq.ai/apis/facebook/pages"},
+    {"id":"facebook-posts","name":"Facebook Posts API","method":"POST","path":"/v1/facebook/posts","landingPage":"https://socq.ai/apis/facebook/posts"},
+    {"id":"facebook-comments","name":"Facebook Comments API","method":"POST","path":"/v1/facebook/comments","landingPage":"https://socq.ai/apis/facebook/comments"},
+    {"id":"youtube-channels","name":"YouTube Channels API","method":"POST","path":"/v1/youtube/channels","landingPage":"https://socq.ai/apis/youtube/channels"},
+    {"id":"youtube-videos","name":"YouTube Videos API","method":"POST","path":"/v1/youtube/videos","landingPage":"https://socq.ai/apis/youtube/videos"},
+    {"id":"youtube-channel-videos","name":"YouTube Channel Videos API","method":"POST","path":"/v1/youtube/channel-videos","landingPage":"https://socq.ai/apis/youtube/channel-videos"},
+    {"id":"youtube-comments","name":"YouTube Comments API","method":"POST","path":"/v1/youtube/comments","landingPage":"https://socq.ai/apis/youtube/comments"},
+    {"id":"youtube-shorts","name":"YouTube Shorts API","method":"POST","path":"/v1/youtube/shorts","landingPage":"https://socq.ai/apis/youtube/shorts"},
+    {"id":"youtube-search","name":"YouTube Search API","method":"POST","path":"/v1/youtube/search","landingPage":"https://socq.ai/apis/youtube/search"},
+    {"id":"youtube-transcripts","name":"YouTube Transcripts API","method":"POST","path":"/v1/youtube/transcripts","landingPage":"https://socq.ai/apis/youtube/transcripts","repository":"youtube-transcript-api","status":"pilot"},
+    {"id":"tiktok-profiles","name":"TikTok Profiles API","method":"POST","path":"/v1/tiktok/profiles","landingPage":"https://socq.ai/apis/tiktok/profiles"},
+    {"id":"tiktok-videos","name":"TikTok Videos API","method":"POST","path":"/v1/tiktok/videos","landingPage":"https://socq.ai/apis/tiktok/videos"},
+    {"id":"tiktok-comments","name":"TikTok Comments API","method":"POST","path":"/v1/tiktok/comments","landingPage":"https://socq.ai/apis/tiktok/comments"},
+    {"id":"tiktok-search","name":"TikTok Search API","method":"POST","path":"/v1/tiktok/search","landingPage":"https://socq.ai/apis/tiktok/search"},
+    {"id":"tiktok-hashtags","name":"TikTok Hashtags API","method":"POST","path":"/v1/tiktok/hashtags","landingPage":"https://socq.ai/apis/tiktok/hashtags"}
+  ]
+}
