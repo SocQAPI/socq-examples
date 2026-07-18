@@ -42,8 +42,20 @@ use notes, and synthetic fixtures.
 |  |  | [Search](https://github.com/SocQAPI/youtube-search-api) |  |  |
 |  |  | [Transcripts](https://github.com/SocQAPI/youtube-transcript-api) |  |  |
 
+### LinkedIn
+
+| Profiles | Companies | Posts | Jobs |
+| --- | --- | --- | --- |
+| [LinkedIn Profiles API](https://github.com/SocQAPI/linkedin-profiles-api) | [LinkedIn Companies API](https://github.com/SocQAPI/linkedin-companies-api) | [LinkedIn Posts API](https://github.com/SocQAPI/linkedin-posts-api) | [LinkedIn Jobs API](https://github.com/SocQAPI/linkedin-jobs-api) |
+
+### Reddit
+
+| Posts | Comments | Subreddit Posts | Search |
+| --- | --- | --- | --- |
+| [Reddit Posts API](https://github.com/SocQAPI/reddit-posts-api) | [Reddit Comments API](https://github.com/SocQAPI/reddit-comments-api) | [Reddit Subreddit Posts API](https://github.com/SocQAPI/reddit-subreddit-posts-api) | [Reddit Search API](https://github.com/SocQAPI/reddit-search-api) |
+
 The machine-readable inventory in
-[`catalog/endpoints.json`](catalog/endpoints.json) maps all 24 public endpoint
+[`catalog/endpoints.json`](catalog/endpoints.json) maps all 32 public endpoint
 contracts to their focused repositories.
 
 ## Shared workflow
