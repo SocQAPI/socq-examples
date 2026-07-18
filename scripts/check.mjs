@@ -24,14 +24,17 @@ for (const endpoint of manifest.endpoints) {
   }
   if (endpoint.method !== "POST") throw new Error(`${endpoint.id} must use POST.`);
   if (endpoint.status !== "published") throw new Error(`${endpoint.id} is not published.`);
+  if (endpoint.contractSource && endpoint.contractSource !== "api-catalog") {
+    throw new Error(`${endpoint.id} has an unsupported contract source.`);
+  }
   if (!endpoint.path.startsWith("/v1/")) throw new Error(`${endpoint.id} has an invalid path.`);
   ids.add(endpoint.id);
   paths.add(endpoint.path);
   repositories.add(endpoint.repository);
 }
 
-if (manifest.endpoints.length !== 20) {
-  throw new Error(`Expected 20 public submit endpoints, found ${manifest.endpoints.length}.`);
+if (manifest.endpoints.length !== 24) {
+  throw new Error(`Expected 24 public submit endpoints, found ${manifest.endpoints.length}.`);
 }
 
 const openApiPath = process.env.SOCQ_OPENAPI_PATH;
@@ -41,7 +44,10 @@ if (openApiPath) {
     .filter(([path, operations]) => path.startsWith("/v1/") && operations?.post)
     .map(([path]) => path)
     .sort();
-  const manifestPaths = [...paths].sort();
+  const manifestPaths = manifest.endpoints
+    .filter((endpoint) => endpoint.contractSource !== "api-catalog")
+    .map((endpoint) => endpoint.path)
+    .sort();
 
   if (JSON.stringify(submitPaths) !== JSON.stringify(manifestPaths)) {
     throw new Error("Endpoint manifest does not match the supplied OpenAPI submit paths.");
@@ -106,4 +112,12 @@ for (const path of walk(root)) {
   }
 }
 
-console.log(`Validated ${manifest.endpoints.length} endpoints and ${requiredFiles.length} example files.`);
+const openApiCount = manifest.endpoints.filter(
+  (endpoint) => endpoint.contractSource !== "api-catalog",
+).length;
+const catalogCount = manifest.endpoints.length - openApiCount;
+
+console.log(
+  `Validated ${manifest.endpoints.length} endpoints (${openApiCount} OpenAPI and ` +
+    `${catalogCount} API catalog) and ${requiredFiles.length} example files.`,
+);
