@@ -72,8 +72,14 @@ use notes, and synthetic fixtures.
 | --- | --- | --- |
 | [Facebook Marketplace Location Search API](https://github.com/SocQAPI/facebook-marketplace-location-search-api) | [Facebook Marketplace Search API](https://github.com/SocQAPI/facebook-marketplace-search-api) | [Facebook Marketplace Item API](https://github.com/SocQAPI/facebook-marketplace-item-api) |
 
+### Facebook Ad Library
+
+| Ad Search | Ad Details | Company Ads | Company Search |
+| --- | --- | --- | --- |
+| [Facebook Ad Library Search API](https://github.com/SocQAPI/facebook-ad-library-search-api) | [Facebook Ad Library Ad API](https://github.com/SocQAPI/facebook-ad-library-ad-api) | [Facebook Ad Library Company Ads API](https://github.com/SocQAPI/facebook-ad-library-company-ads-api) | [Facebook Ad Library Company Search API](https://github.com/SocQAPI/facebook-ad-library-company-search-api) |
+
 The machine-readable inventory in
-[`catalog/endpoints.json`](catalog/endpoints.json) maps all 42 public endpoint
+[`catalog/endpoints.json`](catalog/endpoints.json) maps all 46 public endpoint
 contracts to their focused repositories.
 
 ## Shared workflow

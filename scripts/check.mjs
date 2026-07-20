@@ -33,8 +33,8 @@ for (const endpoint of manifest.endpoints) {
   repositories.add(endpoint.repository);
 }
 
-if (manifest.endpoints.length !== 42) {
-  throw new Error(`Expected 42 public submit endpoints, found ${manifest.endpoints.length}.`);
+if (manifest.endpoints.length !== 46) {
+  throw new Error(`Expected 46 public submit endpoints, found ${manifest.endpoints.length}.`);
 }
 
 const openApiPath = process.env.SOCQ_OPENAPI_PATH;
