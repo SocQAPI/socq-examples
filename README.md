@@ -54,8 +54,20 @@ use notes, and synthetic fixtures.
 | --- | --- | --- | --- |
 | [Reddit Posts API](https://github.com/SocQAPI/reddit-posts-api) | [Reddit Comments API](https://github.com/SocQAPI/reddit-comments-api) | [Reddit Subreddit Posts API](https://github.com/SocQAPI/reddit-subreddit-posts-api) | [Reddit Search API](https://github.com/SocQAPI/reddit-search-api) |
 
+### Pinterest
+
+| Profiles | Pins | User Pins | Search |
+| --- | --- | --- | --- |
+| [Pinterest Profiles API](https://github.com/SocQAPI/pinterest-profiles-api) | [Pinterest Pins API](https://github.com/SocQAPI/pinterest-pins-api) | [Pinterest User Pins API](https://github.com/SocQAPI/pinterest-user-pins-api) | [Pinterest Search API](https://github.com/SocQAPI/pinterest-search-api) |
+
+### Threads
+
+| Profiles | Posts | User Posts |
+| --- | --- | --- |
+| [Threads Profiles API](https://github.com/SocQAPI/threads-profiles-api) | [Threads Posts API](https://github.com/SocQAPI/threads-posts-api) | [Threads User Posts API](https://github.com/SocQAPI/threads-user-posts-api) |
+
 The machine-readable inventory in
-[`catalog/endpoints.json`](catalog/endpoints.json) maps all 32 public endpoint
+[`catalog/endpoints.json`](catalog/endpoints.json) maps all 39 public endpoint
 contracts to their focused repositories.
 
 ## Shared workflow

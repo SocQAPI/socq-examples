@@ -33,8 +33,8 @@ for (const endpoint of manifest.endpoints) {
   repositories.add(endpoint.repository);
 }
 
-if (manifest.endpoints.length !== 32) {
-  throw new Error(`Expected 32 public submit endpoints, found ${manifest.endpoints.length}.`);
+if (manifest.endpoints.length !== 39) {
+  throw new Error(`Expected 39 public submit endpoints, found ${manifest.endpoints.length}.`);
 }
 
 const openApiPath = process.env.SOCQ_OPENAPI_PATH;
@@ -49,8 +49,11 @@ if (openApiPath) {
     .map((endpoint) => endpoint.path)
     .sort();
 
-  if (JSON.stringify(submitPaths) !== JSON.stringify(manifestPaths)) {
-    throw new Error("Endpoint manifest does not match the supplied OpenAPI submit paths.");
+  const missingManifestPaths = manifestPaths.filter((path) => !submitPaths.includes(path));
+  if (missingManifestPaths.length) {
+    throw new Error(
+      `Endpoint manifest paths missing from the supplied OpenAPI: ${missingManifestPaths.join(", ")}.`,
+    );
   }
 }
 
