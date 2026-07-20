@@ -66,8 +66,14 @@ use notes, and synthetic fixtures.
 | --- | --- | --- |
 | [Threads Profiles API](https://github.com/SocQAPI/threads-profiles-api) | [Threads Posts API](https://github.com/SocQAPI/threads-posts-api) | [Threads User Posts API](https://github.com/SocQAPI/threads-user-posts-api) |
 
+### Facebook Marketplace
+
+| Location Search | Listing Search | Item Details |
+| --- | --- | --- |
+| [Facebook Marketplace Location Search API](https://github.com/SocQAPI/facebook-marketplace-location-search-api) | [Facebook Marketplace Search API](https://github.com/SocQAPI/facebook-marketplace-search-api) | [Facebook Marketplace Item API](https://github.com/SocQAPI/facebook-marketplace-item-api) |
+
 The machine-readable inventory in
-[`catalog/endpoints.json`](catalog/endpoints.json) maps all 39 public endpoint
+[`catalog/endpoints.json`](catalog/endpoints.json) maps all 42 public endpoint
 contracts to their focused repositories.
 
 ## Shared workflow
