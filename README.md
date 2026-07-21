@@ -78,8 +78,14 @@ use notes, and synthetic fixtures.
 | --- | --- | --- | --- |
 | [Facebook Ad Library Search API](https://github.com/SocQAPI/facebook-ad-library-search-api) | [Facebook Ad Library Ad API](https://github.com/SocQAPI/facebook-ad-library-ad-api) | [Facebook Ad Library Company Ads API](https://github.com/SocQAPI/facebook-ad-library-company-ads-api) | [Facebook Ad Library Company Search API](https://github.com/SocQAPI/facebook-ad-library-company-search-api) |
 
+### TikTok Shop
+
+| Search | Store Products | Product Details | Product Reviews | User Showcase |
+| --- | --- | --- | --- | --- |
+| [TikTok Shop Search API](https://github.com/SocQAPI/tiktok-shop-search-api) | [TikTok Shop Products API](https://github.com/SocQAPI/tiktok-shop-products-api) | [TikTok Shop Product API](https://github.com/SocQAPI/tiktok-shop-product-api) | [TikTok Shop Product Reviews API](https://github.com/SocQAPI/tiktok-shop-product-reviews-api) | [TikTok Shop User Showcase API](https://github.com/SocQAPI/tiktok-shop-user-showcase-api) |
+
 The machine-readable inventory in
-[`catalog/endpoints.json`](catalog/endpoints.json) maps all 46 public endpoint
+[`catalog/endpoints.json`](catalog/endpoints.json) maps all 51 public endpoint
 contracts to their focused repositories.
 
 ## Shared workflow
